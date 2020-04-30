@@ -1,0 +1,92 @@
+{% extends "firstapp/base.html" %}
+{% block link %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static "css/user.css" %}"/>
+{% endblock %}
+{% block content %}
+    <div class="user_content">
+        <table align="center" class="information_table">
+            <tr>
+                <th>Пользователь:</th>
+                <th>{{ user.username }}</th>
+            </tr>
+            <tr>
+                <th>Почта:</th>
+                <th>{{ user.email }}</th>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <a href="{% url 'changepassword' %}" class="style_button">
+                        <font class="color_text">Смена пароля</font>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <a href="{% url 'logout' %}" class="style_button">
+                        <font class="color_text">Выйти из аккаунта</font>
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    {% if tickets == "None" %}
+        <div class="user_tickets_none_display">
+        <font color="white" size="42" class="user_none_ticket">
+            У вас нет билетов
+        </font>
+    {% else %}
+        <div class="user_tickets_display">
+        <form method="post">
+            {% csrf_token %}
+            <table border="1" align="center" class="tickets_display">
+                <tr>
+                    <th>
+                        <font color="black">Название тура</font>
+                    </th>
+                    <th>
+                        <font color="black">Дата отправления</font>
+                    </th>
+                    <th>
+                        <font color="black">Дата прибытия</font>
+                    </th>
+                    <th>
+                        <font color="black">Стоимость</font>
+                    </th>
+                    <th>
+                        <font color="black">Количество</font>
+                    </th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                {% for ticket in tickets %}
+                    <tr>
+                        <td>
+                            <font color="black">{{ ticket.tour.tour }}</font>
+                        </td>
+                        <td>
+                            <font color="black">{{ ticket.tour.date_of_arrival }}</font>
+                        </td>
+                        <td>
+                            <font color="black">{{ ticket.tour.date_of_departure }}</font>
+                        </td>
+                        <td>
+                            <font color="black"> {{ ticket.tour.cost }}</font>
+                        </td>
+                        <td>
+                            <font color="black"> {{ ticket.count }}</font>
+                        </td>
+                        <td>
+                            <a href="{% url 'tourpage' name=ticket.tour.tour %}" class="button_about">Подробнее</a>
+                        </td>
+                        <td>
+                            <input type="hidden" value="{{ ticket.tour.tour }}" name="{{ forloop.counter }}">
+                            <input type="submit" value="Отказаться" name="{{ forloop.counter }}" class="button">
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </form>
+    {% endif %}
+</div>
+{% endblock %}

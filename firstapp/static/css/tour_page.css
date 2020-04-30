@@ -1,0 +1,31 @@
+.main_block_tour_page{
+    background-color: #efefef;
+    border-radius: 12px;
+    height: 150px;
+}
+.description_tour_page{
+    border-radius: 5px;
+    border:1px solid #ccc;
+    min-height:300px;
+    height:auto;
+}
+.description_tour_page div{
+    padding: 10px 10px;
+}
+.order_tour{
+    width: 120px;
+    height: 40px;
+    color: #834aff;
+    border-radius: 5px;
+    background-color: #ffadb8;
+    font-style: oblique;
+}
+.color_count{
+    color: #c32cc8;
+}
+.dinamic_image{
+    padding-top: 20px;
+}
+.count_field{
+    border-radius: 5px;
+}

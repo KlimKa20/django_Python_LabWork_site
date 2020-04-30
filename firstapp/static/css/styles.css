@@ -1,0 +1,30 @@
+body{
+    font-family: Verdana;
+    background-image: url("/static/image/5.jpg") ;
+    background-size: 100%;
+}
+h1{color: #c32cc8;
+}
+div.position{
+    margin: 0 auto;
+    width: 300px;
+    padding: 5%;
+    color: white;
+}
+.myfield{
+    border:1px solid #ccc;
+    border-radius:5px;
+    height:25px;
+    width:200px;
+    margin: 10px 10px 10px 0;
+}
+.log_button{
+    width:250px;
+    margin: 30px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+.break_a{
+    color: white;
+    text-decoration:none ;
+}

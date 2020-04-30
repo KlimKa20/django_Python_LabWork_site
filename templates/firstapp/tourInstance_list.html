@@ -1,0 +1,33 @@
+{% extends "firstapp/base.html" %}
+{% block link %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static "css/tour_instance_list.css" %}"/>
+{% endblock %}
+{% block content %}
+    <h2>Туристические предложения</h2>
+    <form method="POST">
+    {% csrf_token %}
+    <table>
+        {% for publisher in object_lis %}
+            <tr>
+                {% for tours in publisher %}
+                    <td style="padding-right: 30px">
+                        <div class="block">
+                            <div>
+                                {% load static %}
+                                <img class="block_img" src="{{ tours.tour.image.url }}">
+                            </div>
+                            <div class="middle_box">{{ tours.tour }}</div>
+                            <div class="down_box">
+                                <font>Стоимость: {{ tours.cost }}$ </font>
+                                <div align="right">
+                                    <a href="{% url 'tourpage' name=tours.tour.title %}">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

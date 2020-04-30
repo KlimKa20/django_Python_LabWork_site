@@ -1,0 +1,51 @@
+body{
+    font-family: Verdana;
+    background: url("/static/image/s1200.webp") ;
+    background-size: 100%;
+    background-attachment:fixed
+}
+.block_img{
+    width: 295px;
+    height: 190px;
+}
+a{
+    font-family: Verdana;
+}
+a:link    {color:#ff6a7b; text-decoration:none}
+a:visited {color: #ff6a7b; text-decoration:none}
+a:hover   {color:red; text-decoration:underline}
+a:active  {color: #2cff00; text-decoration:underline}
+#container{
+    width:1000px;
+    min-height: 1000px;
+    height: auto;
+    margin:10% 14%;
+    background:#fff;
+    padding:0.7%;
+    -webkit-border-radius:20px;
+    -moz-border-radius:20px;
+    border-radius:20px;
+    overflow-y: scroll;
+    overflow: hidden;
+}
+#header{
+    height:100px;
+    background:#eee;
+    border-radius: 5px;
+}
+#footer{
+    height:100px;
+    margin-top: 10px;
+    background: #ffadb8;
+    border-radius: 5px;
+}
+#content{
+    margin:10px;
+    min-height:780px;
+    height: auto;
+}
+.condition{
+    text-align: right;
+    margin-right: 35px;
+    padding-top: 3%;
+}

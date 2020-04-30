@@ -1,0 +1,22 @@
+.block{
+    border: 1px solid #ccc;
+    width: 295px;
+}
+.middle_box{
+    border-bottom:1px solid #ccc;
+    padding: 15px 15px;
+    color: #ff6a7b
+}
+.down_box{
+    margin: 15px 15px
+}
+.down_box a{
+    width: 100px;
+    height: 20px;
+    border-bottom-right-radius: 5px;
+    margin-left: 45px
+}
+.block_img{
+    width: 295px;
+    height: 190px;
+}

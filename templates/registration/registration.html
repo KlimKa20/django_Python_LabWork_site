@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="{% static "/css/styles.css" %}"/>
+    <title>Hello Django</title>
+
+</head>
+<body>
+<div class="position">
+    <form method="POST">
+        <ul>
+            {% if error_name %}
+                <li>{{ error_name }}</li>
+            {% endif %}
+            {% if error_password %}
+                <li>{{ error_password }}</li>
+            {% endif %}
+            {% if error_mail %}
+                <li>{{ error_mail }}</li>
+            {% endif %}
+        </ul>
+        {% csrf_token %}
+        <table>
+            {{ form }}
+        </table>
+        <input type="submit" value="Send" class="log_button" id="1">
+    </form>
+</div>
+</body>
+</html>

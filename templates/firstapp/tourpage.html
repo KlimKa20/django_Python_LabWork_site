@@ -1,0 +1,62 @@
+{% extends "firstapp/base.html" %}
+{% block title %}
+    {{ tours.tour }}
+{% endblock %}
+{% block link %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static "css/tour_page.css" %}"/>
+{% endblock %}
+{% block content %}
+    <h2>Стоимость : {{ tours.cost }}$</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="main_block_tour_page">
+            <table>
+                <tr>
+                    <th colspan="2">
+                        <h2>{{ tours.tour }}</h2>
+                    </th>
+                    <th>
+                        {% if tours.number_of_seats != 0 %}
+                            <input type="number" value="1" name="number" width="10px" max="{{ tours.number_of_seats }}"
+                                   min="1" class="count_field">
+                            <input type="hidden" name="counter" value="{{ tours.tour.title }}">
+                            <input type="submit" value="Заказать" name="заказ" class="order_tour">
+                        {% else %}
+                            <div>
+                                К сожалению, билеты закончились
+                            </div>
+                        {% endif %}
+                    </th>
+                </tr>
+                <tr>
+                    <th align="left">
+                        <ul>
+                            <li>Количество оставшигся мест: <b class="color_count">{{ tours.number_of_seats }}</b></li>
+                            <li>Страны посещения: Египет</li>
+                        </ul>
+                    </th>
+                    <th align="left">
+                        <ul>
+                            <li>Дата выезда: {{ tours.date_of_departure }}</li>
+                            <li>Дата приезда: {{ tours.date_of_arrival }}</li>
+                        </ul>
+                    </th>
+                    <th align="left">
+                        <ul>
+                            <li>Владелец: {{ tours.tour.owner }}</li>
+                            <li>Тип отдыха: {{ tours.tour.type }}</li>
+                        </ul>
+                    </th>
+                </tr>
+            </table>
+        </div>
+    </form>
+    {% load static %}
+    <img src="{{ tours.tour.image.url }}" width="100%" height="250px" class="dinamic_image">
+    <div class="description_tour_page">
+        <div>
+            <pre>{{ tours.tour.description }}</pre>
+        </div>
+    </div>
+{% endblock %}

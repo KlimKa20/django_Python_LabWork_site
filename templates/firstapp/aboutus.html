@@ -1,0 +1,65 @@
+{% extends "firstapp/base.html" %}
+{% block link %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static "css/about_us.css" %}"/>
+{% endblock %}
+{% block title %}
+    О нас
+{% endblock %}
+{% block content %}
+    <div class="background_img">
+        <table>
+            <tr>
+                <td>
+                    <div class="contact-info">
+                        <h3>Отдел продаж №1</h3>
+                        <ul>
+                            <li>г. Минск, ул. Я. Коласа,40</li>
+                            <li> Пн.-Пт. 9:00 - 19:00, Сб, Вс: выходной</li>
+                            <li>+375 17 280-11-11 (многоканальный)</li>
+                            <li>+375 29 680-11-11, +375 29 780-11-11</li>
+                            <li>minsk1@toptour.by</li>
+                        </ul>
+                    </div>
+                </td>
+                <td>
+                    <div class="contact-info">
+                        <h3>Отдел продаж №3</h3>
+                        <ul>
+                            <li>г. Минск, ул. Чкалова,22</li>
+                            <li> Пн.-Пт. 9:00 - 19:00, Сб, Вс: выходной</li>
+                            <li>+375 17 280-11-11 (многоканальный)</li>
+                            <li>+375 29 780-11-11, +375 29 680-11-11</li>
+                            <li>minsk3@toptour.by</li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="contact-info">
+                        <h3>Отдел продаж №4</h3>
+                        <ul>
+                            <li>г. Минск, пр. Независимости, 39</li>
+                            <li>Пн-Пт: с 09.00 - 19.00, Сб: 10.00 - 17.00, Вс: выходной</li>
+                            <li>+375 17 242-21-51</li>
+                            <li>+375 44 722-82-02</li>
+                            <li>minsk4@toptour.by</li>
+                        </ul>
+                    </div>
+                </td>
+                <td>
+                    <div class="contact-info">
+                        <h3>Авиакасса-3</h3>
+                        <ul>
+                            <li>г. Минск, ул. Я. Коласа, 40</li>
+                            <li>Пн-Пт: с 09.00 - 19.00, Сб: 10.00 - 17.00, Вс: выходной</li>
+                            <li>+375 17 292-94-86</li>
+                            <li>aviaminsk3@toptour.by</li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+{% endblock %}

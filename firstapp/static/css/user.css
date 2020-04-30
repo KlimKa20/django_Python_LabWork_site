@@ -1,0 +1,64 @@
+
+.user_tickets_none_display{
+    border: #d0d1d4 solid 1px;
+    border-radius: 5px;
+    min-height: 600px;
+    height: auto;
+    margin-top: 40px;
+    padding-top: 40px;
+    background-image: url("/static/image/s12.jfif") ;
+    background-size: 100%;
+}
+.user_tickets_display{
+    border: #d0d1d4 solid 1px;
+    border-radius: 5px;
+    min-height: 600px;
+    height: auto;
+    margin-top: 40px;
+    padding-top: 40px;
+    background-image: url("/static/image/c119c8f06ccaa.jpg") ;
+    background-size: 100%;
+    background-attachment:fixed
+}
+.user_content{
+    margin-top: 20px;
+}
+.user_content td{
+    padding-top: 10px
+}
+.user_content th{
+    padding-top: 10px
+}
+.tickets_display{
+    opacity: 1;
+    border-color: #ff0003;
+}
+.information_table{
+    padding: 10px;
+}
+.user_none_ticket{
+    margin:0 0 0 30%;
+}
+.style_button{
+    -moz-appearance: button; /* Firefox */
+    -webkit-appearance: button; /* Chromium */
+    padding: .2em .75em;
+    text-decoration: none;
+    border: black solid 1px;
+    border-radius: 5px;
+    background-color: #ffadb8;
+}
+.button{
+    width: 120px;
+    height: 40px;
+    color: #834aff;
+    border-radius: 5px;
+    background-color: #ffadb8;
+    font-style: oblique;
+}
+.color_text{
+    color: #834aff;
+}
+.button_about{
+    color: #c8070f;
+}
